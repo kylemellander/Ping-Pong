@@ -3,15 +3,15 @@ var number = prompt("Please provide a whole, positive number");
 var pingPong = function (x) {
     if(number % 3 === 0) {
         if(number % 5 === 0) {
-            return "ping-pong";
+            console.log("ping-pong");
         } else {
-            return "ping";
+            console.log("ping");
         }
     } else if (number % 5 === 0 ) {
-        return "pong";
+        console.log("pong");
     } else {
-        return number;
+        console.log(number);
     }
 }
 
-console.log(pingPong(number));
+pingPong(number);
