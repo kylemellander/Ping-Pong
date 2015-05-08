@@ -1,7 +1,17 @@
 var number = prompt("Please provide a whole, positive number");
 
-if(number % 2 === 0) {
-    console.log("The first number is even");
-} else {
-    console.log("The first number is odd");
+var pingPong = function (x) {
+    if(number % 3 === 0) {
+        if(number % 5 === 0) {
+            return "ping-pong";
+        } else {
+            return "ping";
+        }
+    } else if (number % 5 === 0 ) {
+        return "pong";
+    } else {
+        return number;
+    }
 }
+
+pingPong(number);
