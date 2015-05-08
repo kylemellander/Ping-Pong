@@ -14,4 +14,4 @@ var pingPong = function (x) {
     }
 }
 
-pingPong(number);
+console.log(pingPong(number));
