@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    background:#333333;
+    color:#fff;
+}
+.container {
+	width:800px;
+	margin:10px auto;
+}
+.title h1 {
+	text-align:center;
+	text-transform: uppercase;
+}
+.main {
+	border: 20px #fff solid;
+	background:#008000;
+	width:100%;
+}
+.main ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+.main ul li {
+	padding:4px 8px;
+}
+.middlestripe {
+	width:100%;
+	height:20px;
+	background:#fff;
+}

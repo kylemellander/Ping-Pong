@@ -1,8 +1,51 @@
 <html>
 <head>
 <title>Ping-Pong Time</title>
+<link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
-<script type="text/javascript" async="" src="pingpong.js"></script>
+	<div class="container">
+		<div class="title"><h1>The Ping-Pong Test</h1></div>
+		<div class="main">
+			<ul>
+			<script>
+				// Get input from user
+				var number = prompt("Please provide a whole, positive number");
+				var fun = 1;
+				
+				// Check input for errors and ask again if necessary
+				while (Math.round(number) != number || number <= 0 || isNaN(number) ) {
+					if (fun < 6) {
+						number = prompt("That wasn't a whole, positive number. Please try again. The number must be whole and positive (i.e. 25 or 133)");
+					} else {
+						number = prompt("Seriously? You haven't figured out a whole, positive number yet? Try again.");
+					}
+					fun++;
+				}
+				
+				var halfNumber = Math.round(number / 2);
+				
+				// Determine output
+				for (var i = 1; i <= number; i++) {
+		   			if (i === halfNumber) {
+		   				document.write ("<div class='middlestripe'></div>");
+		   			}
+		   		
+		   			if(i % 3 === 0) {
+   						if(i % 5 === 0) {
+    	   					document.write("<li style='padding-left:" + Math.floor((Math.random() * 700) + 10) + "px'>ping-pong</li>");
+			    		} else {
+    		       			document.write("<li style='padding-left:" + Math.floor((Math.random() * 350) + 10) + "px'>ping</li>");
+   						}
+	    			} else if (i % 5 === 0 ) {
+    					document.write("<li style='padding-left:" + Math.floor((Math.random() * 350) + 400) + "px'>pong</li>");
+					} else {
+    	   				document.write("<li style='margin:0 auto; text-align:center;'>" + i + "</li>");
+					}
+				}
+			</script>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>
